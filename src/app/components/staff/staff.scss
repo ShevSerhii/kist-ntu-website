@@ -1,0 +1,87 @@
+/* Grid Layout */
+.staff-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  min-height: 300px; /* Prevent layout jump */
+}
+
+/* Filter Buttons Styling */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--text-gray);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #e2e8f0;
+    color: var(--dark);
+  }
+
+  &.active {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    border-color: var(--primary);
+  }
+}
+
+/* Card Styling */
+.staff-card {
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* Simple fade in animation for filtering */
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.prof-border { border-left: 5px solid var(--primary); }
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+h4 { margin: 0; font-size: 1.1rem; font-weight: 700; }
+.role { margin: 4px 0; font-size: 0.9rem; color: var(--primary); font-weight: 600; }
+.deg { font-size: 0.8rem; color: var(--text-gray); }
+
+.empty-state {
+  text-align: center;
+  grid-column: 1 / -1;
+  color: var(--text-gray);
+  padding: 40px;
+}

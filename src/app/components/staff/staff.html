@@ -1,0 +1,35 @@
+<section id="staff" class="section bg-light">
+  <div class="container">
+    <div class="section-header" appAnimate>
+      <h2>Команда</h2>
+    </div>
+
+    <div class="filters" appAnimate>
+      @for (filter of filters; track filter) {
+        <button 
+          class="filter-btn" 
+          [class.active]="activeFilter === filter"
+          (click)="setFilter(filter)">
+          {{ filter }}
+        </button>
+      }
+    </div>
+
+    <div class="staff-list">
+      @for (p of filteredStaff; track p.name) {
+        <div class="glass-card staff-card animate-fade" [class.prof-border]="p.isProf">
+          <div class="avatar">{{ p.name | slice:0:1 }}</div>
+          <div class="info">
+            <h4>{{ p.name }}</h4>
+            <p class="role">{{ p.position }}</p>
+            <span class="deg">{{ p.degree }}</span>
+          </div>
+        </div>
+      }
+      
+      @if (filteredStaff.length === 0) {
+        <div class="empty-state">Співробітників у цій категорії не знайдено.</div>
+      }
+    </div>
+  </div>
+</section>

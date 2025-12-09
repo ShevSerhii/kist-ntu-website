@@ -1,0 +1,15 @@
+<section id="science" class="section">
+  <div class="container">
+    <div class="section-header" appAnimate>
+      <h2>Наукова діяльність</h2>
+    </div>
+    <div class="pub-list">
+      @for (pub of pubs; track pub.text) {
+        <div class="glass-card pub-item" appAnimate>
+          <div class="pub-year">{{ pub.year }}</div>
+          <div class="pub-text">{{ pub.text }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

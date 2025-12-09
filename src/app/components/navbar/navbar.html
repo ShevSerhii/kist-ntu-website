@@ -1,0 +1,20 @@
+<nav class="navbar">
+  <div class="container nav-content">
+    <div class="brand">
+      <div class="brand-logo">IT</div>
+      <div class="brand-text">KIST <span class="highlight">NTU</span></div>
+    </div>
+
+    <div class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="links" [class.active]="isMenuOpen">
+      <a (click)="scrollTo('about')">Історія</a>
+      <a (click)="scrollTo('programs')">Навчання</a>
+      <a (click)="scrollTo('science')">Наука</a>
+      <a (click)="scrollTo('staff')">Команда</a>
+      <a (click)="scrollTo('footer')">Контакти</a>
+    </div>
+  </div>
+</nav>

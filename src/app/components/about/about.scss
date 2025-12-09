@@ -1,0 +1,18 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+
+.card-pad {
+  padding: 35px;
+  height: 100%;
+}
+
+h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}

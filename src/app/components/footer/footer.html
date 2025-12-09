@@ -1,0 +1,64 @@
+<footer id="footer">
+  <div class="footer-gradient"></div>
+
+  <button class="scroll-top-btn" (click)="scrollToTop()" aria-label="Вгору">
+    ↑
+  </button>
+
+  <div class="container">
+    <div class="footer-grid">
+      
+      <div class="footer-col info-col" appAnimate>
+        <div class="brand">
+          <div class="brand-logo">IT</div>
+          <h3>КІСТ НТУ</h3>
+        </div>
+        <p class="university">Національний транспортний університет</p>
+        
+        <div class="contacts-block">
+          <div class="contact-item">
+            <span class="icon">📍</span>
+            <p>Київ, вул. М. Омеляновича-Павленка 1, <br>корпус 1, каб. 347а</p>
+          </div>
+          <a href="tel:+380442807066" class="contact-item link">
+            <span class="icon">📞</span> +38 (044) 280-70-66
+          </a>
+          <a href="mailto:kistntu@ukr.net" class="contact-item link">
+            <span class="icon">✉️</span> kistntu@ukr.net
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col nav-col" appAnimate>
+        <h4>Навігація</h4>
+        <ul class="footer-links">
+          <li><a (click)="scrollToSection('about')">Історія кафедри</a></li>
+          <li><a (click)="scrollToSection('programs')">Освітні програми</a></li>
+          <li><a (click)="scrollToSection('science')">Наукова діяльність</a></li>
+          <li><a (click)="scrollToSection('staff')">Викладацький склад</a></li>
+          <li><a (click)="scrollToSection('news')">Останні новини</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col map-col" appAnimate>
+        <h4>Ми на мапі</h4>
+        <div class="map-wrapper glass-card">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.380727581559!2d30.54228931573029!3d50.44146197947416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfa068e6274b%3A0x629193152647754!2z0J3QsNGG0ZbQvtC90LDQu9GM0L3QuNC5INGC0YDQsNC90YHQv9C-0YDRgtC90LjQuSDRg9C90ZbQstC10YDRgdC40YLQtdGCLCDQvtC7LiDQnNGBLiDQntC80LXQu9GP0L3QvtCy0LjRh9CwLdCf0LDQstC70LXQvdC60LAsIDEsIEt5aXYsIDAyMDAw!5e0!3m2!1sen!2sua!4v1675782921345!5m2!1sen!2sua" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      <p>© 2025 Кафедра Інформаційних Систем і Технологій. Всі права захищено.</p>
+    </div>
+  </div>
+</footer>

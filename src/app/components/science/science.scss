@@ -1,0 +1,24 @@
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pub-item {
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+  align-items: flex-start;
+}
+
+.pub-year {
+  background: var(--dark);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  min-width: 60px;
+  text-align: center;
+}

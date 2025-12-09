@@ -1,0 +1,132 @@
+/* Grid System */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  align-items: stretch; /* Щоб картки були однієї висоти */
+}
+
+/* Card Styles */
+.prog-card {
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #e2e8f0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: var(--text-gray);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.prog-card:hover .icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.prog-desc {
+  flex-grow: 1;
+  margin-bottom: 20px;
+  color: var(--text-gray);
+}
+
+/* Details Box inside Card */
+.prog-details {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: auto;
+  border: 1px solid rgba(0,0,0,0.05);
+
+  h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+}
+
+/* Custom Checklist */
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--dark);
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #10b981; /* Green success color */
+      font-weight: bold;
+    }
+  }
+}
+
+/* Delay for second card animation */
+.delay-2 { transition-delay: 0.2s; }
+
+/* Features Row (Bottom) */
+.features-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.feat-item {
+  text-align: center;
+  
+  .feat-icon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  h5 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+  }
+}
+
+/* Mobile Adaptation */
+@media (max-width: 992px) {
+  .features-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

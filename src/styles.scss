@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+/* Variables */
+:root {
+  --dark: #0f172a;
+  --primary: #2563eb;
+  --primary-light: #60a5fa;
+  --accent: #8b5cf6;
+  --white: #ffffff;
+  --bg-light: #f8fafc;
+  --text-gray: #64748b;
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+}
+
+/* Reset & Base */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Manrope', sans-serif;
+  color: var(--dark);
+  background-color: #f1f5f9;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section { padding: 100px 0; }
+.bg-light { background: var(--bg-light); }
+.text-gradient { 
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); 
+  background-clip: text;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  transition: 0.3s;
+  
+  &:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  }
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  h2 { font-size: 2.5rem; margin-bottom: 10px; font-weight: 800; }
+}
+
+/* Animation Classes (Used by Directive) */
+.animate-on-scroll { 
+  opacity: 0; 
+  transform: translateY(30px); 
+  transition: 0.8s ease-out; 
+}
+.animate-on-scroll.visible { 
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
+/* Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
