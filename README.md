@@ -88,7 +88,7 @@ src/app/
 
 ### 2. Клонування репозиторію
 ```bash
-git clone [https://github.com/ВАШ_НІКНЕЙМ/kist-ntu-website.git](https://github.com/ВАШ_НІКНЕЙМ/kist-ntu-website.git)
+git clone [https://github.com/ВАШ_НІКНЕЙМ/kist-ntu-website.git](https://github.com/ShevSerhii/kist-ntu-website.git)
 cd kist-ntu-website
 ```
 
@@ -102,7 +102,7 @@ cd kist-ntu-website
 ### 2. Клонування репозиторію
 
 ```bash
-git clone [https://github.com/ВАШ_НІКНЕЙМ/kist-ntu-website.git](https://github.com/ВАШ_НІКНЕЙМ/kist-ntu-website.git)
+git clone [https://github.com/ВАШ_НІКНЕЙМ/kist-ntu-website.git](https://github.com/ShevSerhii/kist-ntu-website.git)
 cd kist-ntu-website
 ```
 
